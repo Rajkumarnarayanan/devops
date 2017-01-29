@@ -135,20 +135,7 @@
     </dependency>
 
   </dependencies>
-<profiles>
-<profile>
-<id>sonar</id>
-<activation>
-<activeByDefault>true</activeByDefault>
-</activation>
-<properties>
-<!-- Optional URL to server. Default value is http://localhost:9000 -->
-<sonar.host.url>
-http://192.168.123.194:9000
-</sonar.host.url>
-</properties>
-</profile>
-</profiles>
+
        
   <build>
     <finalName>jpetstore</finalName>
@@ -189,7 +176,20 @@ http://192.168.123.194:9000
     <cargo.maven.containerUrl>http://archive.apache.org/dist/tomcat/tomcat-${tomcat.major-version}/v${tomcat.version}/bin/apache-tomcat-${tomcat.version}.zip</cargo.maven.containerUrl>
   </properties>
 
-  <profiles>
+  
+<profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://192.168.123.194:9000
+</sonar.host.url>
+</properties>
+</profile>        
     <profile>
       <id>tomcat90</id>
       <properties>
