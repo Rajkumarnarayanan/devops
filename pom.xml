@@ -43,13 +43,19 @@
   <issueManagement>
     <system>GitHub Issue Management</system>
     <url>https://github.com/mybatis/jpetstore/issues</url>
-  </issueManagement>
+
+       </issueManagement>
   <ciManagement>
     <system>Travis CI</system>
     <url>https://travis-ci.org/mybatis/jpetstore-6</url>
   </ciManagement>
   <distributionManagement>
     <site>
+     <snapshotRepository>
+<id>nexus</id>
+<name>Internal Releases</name>
+<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+</snapshotRepository>      
       <id>gh-pages</id>
       <name>Mybatis GitHub Pages</name>
       <url>git:ssh://git@github.com/mybatis/jpetstore-6.git?gh-pages#</url>
